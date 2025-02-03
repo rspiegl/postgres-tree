@@ -6,7 +6,13 @@ Instead of Spring Initializr this app was initially created with Bootify.io.
 
 ## Development
 
-When starting the application `docker compose up` is called and the app will connect to the contained services.
+The database needs to be started before the repository can be built due to the jOOQ codegen. For that run
+
+```
+docker compose up -d
+``` 
+
+in the root directory.
 [Docker](https://www.docker.com/get-started/) must be available on the current system.
 
 The application can be run by starting
