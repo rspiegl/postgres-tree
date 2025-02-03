@@ -1,0 +1,167 @@
+{
+  "info": {
+    "_postman_id": "56fc9d1d-5fdd-4ddf-a02e-55f651fcd3c4",
+    "name": "PostgresTree",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30450966"
+  },
+  "item": [
+    {
+      "name": "Create Edge",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "{\r\n  \"fromId\": 0,\r\n  \"toId\": 1\r\n}",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/edges",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "edges"
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST --location \"http://localhost:8080/api/edges\" \\\r\n    -d '{\r\n  \"fromId\": 0,\r\n  \"toId\": 1\r\n}'"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Edge",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "{\r\n  \"fromId\": 0,\r\n  \"toId\": 1\r\n}",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/edges",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "edges"
+          ]
+        },
+        "description": "Generated from cURL: curl -X DELETE --location \"http://localhost:8080/api/edges\" \\\r\n    -d '{\r\n  \"fromId\": 0,\r\n  \"toId\": 1\r\n}'"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete All Edges",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/edges/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "edges",
+            "all"
+          ]
+        },
+        "description": "Generated from cURL: curl -X DELETE --location \"http://localhost:8080/api/edges/all\""
+      },
+      "response": []
+    },
+    {
+      "name": "Generate unbalanced tree",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trees/generate?nodes=1000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trees",
+            "generate"
+          ],
+          "query": [
+            {
+              "key": "nodes",
+              "value": "1000000"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST --location \"http://localhost:8080/api/trees/generate?nodes=1000000\""
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve tree (optimal)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trees/streaming/0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trees",
+            "streaming",
+            "0"
+          ]
+        },
+        "description": "Generated from cURL: curl -X GET --location \"http://localhost:8080/api/trees/streaming/0\""
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve tree (non-optimal)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trees/0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trees",
+            "0"
+          ]
+        },
+        "description": "Generated from cURL: curl -X GET --location \"http://localhost:8080/api/trees/0\""
+      },
+      "response": []
+    }
+  ]
+}

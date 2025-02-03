@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: tree-postgres
+    build: .
+    environment:
+      - POSTGRES_DB=tree
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=P4ssword!
+    ports:
+      - 5432:5432

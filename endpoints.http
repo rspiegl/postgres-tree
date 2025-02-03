@@ -1,0 +1,27 @@
+###
+POST http://localhost:8080/api/edges
+
+{
+  "fromId": 0,
+  "toId": 1
+}
+
+###
+DELETE http://localhost:8080/api/edges
+
+{
+  "fromId": 0,
+  "toId": 1
+}
+
+###
+DELETE http://localhost:8080/api/edges/all
+
+###
+POST http://localhost:8080/api/trees/generate?nodes=10000000
+
+###
+GET http://localhost:8080/api/trees/0/non-optimal
+
+###
+GET http://localhost:8080/api/trees/0/optimal

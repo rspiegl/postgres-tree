@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/tree}
+    username: ${JDBC_DATABASE_USERNAME:postgres}
+    password: ${JDBC_DATABASE_PASSWORD:P4ssword!}
+  docker:
+    compose:
+      lifecycle-management: start-only
+  jooq:
+    sql-dialect: postgres
+
+error:
+  handling:
+    http-status-in-json-response: true
+    exception-logging: NO_LOGGING
+    full-stacktrace-http-statuses: 5xx
+    log-levels:
+      5xx: ERROR
+springdoc:
+  pathsToMatch: /, /api/**
